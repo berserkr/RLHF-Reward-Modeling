@@ -112,8 +112,8 @@ tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, use_fast = False)
 tokenizer.pad_token = tokenizer.eos_token
 print(tokenizer.padding_side)
 tokenizer.model_max_length = script_args.max_length
-tokenizer.padding_side = "right"
-#tokenizer.truncation_side = "left"
+#tokenizer.padding_side = "right"
+tokenizer.truncation_side = "left"
 
 # Get the dataset
 train_path = script_args.train_set_path
